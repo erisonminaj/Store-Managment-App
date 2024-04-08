@@ -14,7 +14,7 @@
 	<name>StorageManagment</name>
 	<description>Storagemanagemnt application</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
