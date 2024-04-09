@@ -11,6 +11,8 @@ public class User implements Serializable {
     @Column(unique = true, nullable = false, updatable = false)
     private long id;
     private String firstname;
+    private String phone;
+    private String profession;
     private String lastname;
     private String email;
     @Column(unique = true, nullable = false, updatable = false)
@@ -20,12 +22,14 @@ public class User implements Serializable {
 
     public User() {}
 
-    public User(String firstName, String lastName, String email, String password, String businessCode) {
+    public User(String firstName, String lastName, String email, String password, String businessCode, String profession, String phone) {
         this.firstname = firstName;
         this.lastname = lastName;
         this.email = email;
         this.password = password;
         this.businessCode = businessCode;
+        this.profession = profession;
+        this.phone = phone;
     }
 
     public long getId() {
@@ -34,6 +38,22 @@ public class User implements Serializable {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getFirstName() {
