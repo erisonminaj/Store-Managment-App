@@ -20,8 +20,6 @@ public class User implements Serializable {
     @Column(nullable = false)
     private String password;
 
-    public User() {}
-
     public User(String firstName, String lastName, String email, String password, String businessCode, String profession, String phone) {
         this.firstname = firstName;
         this.lastname = lastName;
@@ -30,6 +28,10 @@ public class User implements Serializable {
         this.businessCode = businessCode;
         this.profession = profession;
         this.phone = phone;
+    }
+
+    public User() {
+
     }
 
     public long getId() {

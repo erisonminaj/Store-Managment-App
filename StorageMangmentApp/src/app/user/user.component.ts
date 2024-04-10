@@ -1,17 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {User} from "./user/User";
-import {UserService} from "./user/user.service";
-
+import {Component, OnInit} from "@angular/core";
+import {User} from "./User";
+import {UserService} from "./user.service";
 
 @Component({
   selector: 'app-root',
   standalone: false,
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './user.component.html',
+  styleUrl: './user.component.css'
 })
-export class AppComponent implements OnInit {
-  title = 'StorageMangmentApp';
+export class UserComponent implements OnInit {
   public users: User[] = [];
 
   constructor(private userService: UserService) {

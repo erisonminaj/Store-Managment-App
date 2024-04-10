@@ -15,37 +15,9 @@
              name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search Item..." required>
     </form>
   </div>
+
+
+    <a routerLink="/products" class="custom-link">View Products</a>
+    <a routerLink="/users" class="custom-link">View Profile</a>
 </nav>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-xl-3" *ngFor="let user of users; let i = index">
-      <div class="card m-b-30">
-        <div class="card-body row">
-          <div class="col-6">
-            <a href=""><img [src]="'https://bootdey.com/img/Content/avatar/avatar' + (i + 1) + '.png'" alt="" class="img-fluid rounded-circle w-60"></a>
-          </div>
-          <div class="col-6 card-title align-self-center mb-0">
-            <h5>{{ user.firstName }} {{ user.lastName }}</h5>
-            <p class="profession m-0 text-center">Profession: {{ user.profession }}</p>
-          </div>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Email : <a href="#">{{ user.email }}</a></li>
-          <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{ user.phone }}</li>
-          <li class="list-group-item"><i class="fa fa-code float-right"></i>Business Code : {{ user.businessCode }}</li>
-        </ul>
-        <div class="card-body">
-          <div class="float-right btn-group btn-group-sm">
-            <a href="#" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
-            <a href="#" class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
-          </div>
-          <ul class="social-links list-inline mb-0">
-            <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Skype"><i class="fa fa-skype"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>

@@ -30,9 +30,8 @@ public class userContrroller {
         return new ResponseEntity<>(users, HttpStatus.OK);
 
     }
-
     @PostMapping("/add")
-    public ResponseEntity<User> generateBussinessCode(@RequestBody User user) {
+    public ResponseEntity<User> addUser(@RequestBody User user) {
         User newUser = userService.generateBussinessCode(user);
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
