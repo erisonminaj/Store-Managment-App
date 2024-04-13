@@ -1,23 +1,98 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" style="color:white;">Storage Management</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarColor02">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage Management</title>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Custom Styles for Sidebar */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 200px;
+      background-color: #343a40; /* Dark background color */
+      padding-top: 50px; /* Adjust according to navbar height */
+    }
+    .sidebar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f8f9fa; /* Light text color */
+      display: block;
+    }
+    .sidebar a:hover {
+      background-color: #495057; /* Darker background color on hover */
+    }
+    /* Custom Styles for Content */
+    .content {
+      margin-left: 200px; /* Adjust according to sidebar width */
+      padding: 20px;
+    }
+    /* Custom Styles for Navbar */
+    .navbar {
+      z-index: 1000; /* Ensure navbar appears above sidebar */
+    }
+    .navbar-brand {
+      position: absolute;
+      top: 0;
+      left: 200px;
+      width: calc(100% - 200px);
+    }
+    /* Custom Styles for Add Item Button */
+    .add-item-button {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar with integrated Sidebar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Sidebar with Title -->
+  <div class="sidebar">
+    <!-- Title -->
+    <div class="navbar-brand">Storage Management</div>
+    <!-- Sidebar links -->
+    <a href="#">Home</a>
+    <a href="#">My Account</a>
+    <!-- Navbar links -->
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <button class="btn btn-primary btn-frame" (click)="createUser()">Add Item</button>
+      <li class="nav-item">
+        <a class="nav-link" href="#">View Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">View Profile</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input type="search" (ngModelChange)="searchUser()" #key="ngModel" ngModel
-             name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search Item..." required>
-    </form>
   </div>
-
-
-    <a routerLink="/products" class="custom-link">View Products</a>
-    <a routerLink="/users" class="custom-link">View Profile</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- Add Item Button -->
+    <button class="btn btn-primary add-item-button">Add Item</button>
+  </div>
 </nav>
-<router-outlet></router-outlet>
+
+
+<!-- Page Content -->
+<div class="content">
+  <!-- Your original content here -->
+  <router-outlet></router-outlet>
+</div>
+
+<!-- Add Bootstrap JS (Optional if you're not using JS features) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
