@@ -1,0 +1,58 @@
+/* Custom Styles for Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 280px; /* Adjusted width for the sidebar */
+  background-color: #343a40; /* Dark background color */
+  padding-top: 50px; /* Adjust according to navbar height */
+}
+.sidebar .navbar-brand {
+  padding: 10px 20px;
+  color: #f8f9fa; /* Light text color */
+  font-size: 24px; /* Increased font size for the headline */
+  text-decoration: none; /* Remove default underline for link */
+}
+.sidebar .navbar-brand:hover {
+  color: #f8f9fa; /* Change color on hover if needed */
+}
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav li {
+  padding: 15px 20px; /* Adjusted padding for sidebar items */
+}
+.sidebar-nav li a {
+  color: #f8f9fa; /* Light text color */
+  text-decoration: none;
+  font-size: 18px; /* Increased font size for sidebar items */
+}
+.sidebar-nav li a:hover {
+  background-color: #495057; /* Darker background color on hover */
+}
+/* Custom Styles for Add Item Button */
+.add-item-button {
+  background-color: blue;
+}
+
+/* Custom Styles for Navbar */
+.navbar {
+  z-index: 1000; /* Ensure navbar appears above sidebar */
+}
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.storage-link {
+  color: inherit; /* Inherit the color from parent (navbar-brand) */
+  text-decoration: none; /* Remove underline */
+}
+
+.storage-link:hover {
+  color: inherit; /* Change color on hover if needed */
+}

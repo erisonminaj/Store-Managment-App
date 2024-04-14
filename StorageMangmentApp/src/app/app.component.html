@@ -8,47 +8,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Add Font Awesome CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <style>
-    /* Custom Styles for Sidebar */
-    .sidebar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 200px;
-      background-color: #343a40; /* Dark background color */
-      padding-top: 50px; /* Adjust according to navbar height */
-    }
-    .sidebar a {
-      padding: 10px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #f8f9fa; /* Light text color */
-      display: block;
-    }
-    .sidebar a:hover {
-      background-color: #495057; /* Darker background color on hover */
-    }
-    /* Custom Styles for Content */
-    .content {
-      margin-left: 200px; /* Adjust according to sidebar width */
-      padding: 20px;
-    }
-    /* Custom Styles for Navbar */
-    .navbar {
-      z-index: 1000; /* Ensure navbar appears above sidebar */
-    }
-    .navbar-brand {
-      position: absolute;
-      top: 0;
-      left: 200px;
-      width: calc(100% - 200px);
-    }
-    /* Custom Styles for Add Item Button */
-    .add-item-button {
-      background-color: blue;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="app.component.css"> <!-- Link to external CSS file -->
 </head>
 
 <body>
@@ -58,18 +18,15 @@
   <!-- Sidebar with Title -->
   <div class="sidebar">
     <!-- Title -->
-    <div class="navbar-brand">Storage Management</div>
+    <div class="navbar-brand">
+      <a href="#" class="storage-link">Storage Management</a>
+    </div>
     <!-- Sidebar links -->
-    <a href="#">Home</a>
-    <a href="#">My Account</a>
-    <!-- Navbar links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">View Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">View Profile</a>
-      </li>
+    <ul class="sidebar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">My Account</a></li>
+      <li><a href="#">View Products</a></li>
+      <li><a href="#">View Profile</a></li>
     </ul>
   </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -78,9 +35,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <!-- Add Item Button -->
-    <button class="btn btn-primary add-item-button">Add Item</button>
+    <button class="btn btn-primary ml-auto mr-2">Add Item</button>
   </div>
 </nav>
+
 
 
 <!-- Page Content -->
