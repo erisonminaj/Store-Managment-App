@@ -1,23 +1,56 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" style="color:white;">Storage Management</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage Management</title>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="app.component.css"> <!-- Link to external CSS file -->
+</head>
+
+<body>
+
+<!-- Navbar with integrated Sidebar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Sidebar with Title -->
+  <div class="sidebar">
+    <!-- Title -->
+    <div class="navbar-brand">
+      <a href="#" class="storage-link">Storage Management</a>
+    </div>
+    <!-- Sidebar links -->
+    <ul class="sidebar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">My Account</a></li>
+      <li><a href="#">View Products</a></li>
+      <li><a href="#">View Profile</a></li>
+    </ul>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarColor02">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <button class="btn btn-primary btn-frame" (click)="createUser()">Add Item</button>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input type="search" (ngModelChange)="searchUser()" #key="ngModel" ngModel
-             name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search Item..." required>
-    </form>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- Add Item Button -->
+    <button class="btn btn-primary ml-auto mr-2">Add Item</button>
   </div>
-
-
-    <a routerLink="/products" class="custom-link">View Products</a>
-    <a routerLink="/users" class="custom-link">View Profile</a>
 </nav>
-<router-outlet></router-outlet>
+
+
+
+<!-- Page Content -->
+<div class="content">
+  <!-- Your original content here -->
+  <router-outlet></router-outlet>
+</div>
+
+<!-- Add Bootstrap JS (Optional if you're not using JS features) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
